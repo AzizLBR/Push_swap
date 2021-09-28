@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: aloubar <aloubar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 18:57:46 by aloubar           #+#    #+#              #
-#    Updated: 2021/09/14 20:06:07 by aloubar          ###   ########.fr        #
+#    Updated: 2021/09/28 15:02:55 by aloubar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ OBJS			=		${SRCS:.c=.o}
 
 RM				=		rm -f
 
-CFLAGS			=		-Wall -Werror -Wextra
+CFLAGS			=		-Wall -Werror -Wextra -fsanitize=address
 
 .c.o:
 						@${CC} ${CFLAGS} -I${HEAD} -c $< -o ${<:.c=.o}
